@@ -1,0 +1,102 @@
+<p>
+    <b>Program time limit: 1 second</b>
+    <br>
+    <b>Program memory limit: 512 MB</b>
+</p>
+
+<p>
+    Ruslana lives in a cold, distant village with $n$ houses and $m$ bidirectional weighted roads.
+    Each house has a colour and contains a tenant that wears a coloured hat.
+    Each tenant has a bag containing some number of tiles,
+    each with a label between $1$ and $n$ inclusive.
+    No two tiles in a bag have the same label.
+    Everyday each tenant draws two tiles $h$ and $d$ from their bag and
+    adds to their schedule a trip to house $h$ after waiting $d$ days.
+    After $d$ days they take the shortest path to house $h$.
+    (If there are multiple trips with the same scheduled date, the tenant travels to each
+    house in the same day in the order they were added to the schedule.
+    Also, if a tenant draws their own house then they do not add the trip to their schedule.)
+    If two trips on the same day taken by different tenants share an edge,
+    then the tenants bump into each other, shake hands, and play a game.
+    Each player draws one tile and the person with the higher tile wins both tiles.
+    If the game is a draw, the game is played until someone wins.
+    Before embarking on any trips, tenants also draw three tiles $l$, $r$ and $v$, and
+    make sure to clean the roads from the $l$th to $r$th road in their path by removing $v$ pieces of debris on each road,
+    reducing the weight of roads in the range by $v$.
+    After they make a trip to a house, tenants wish to renovate their new abode,
+    painting it their favourite colour, the colour of their hat.
+    Tenants quickly experience nostalgia from bygone days and paint their hat the old colour of the house they just made a trip to,
+    thus swapping colours of their hat and their new house.
+    If multiple tenants make a trip to the same house on the same day,
+    then they all play the tile drawing game together until someone wins.
+    That player decides the colour of the house.
+    If all tiles in bags have an equal chance of being drawn at each stage and are replaced immediately,
+    what is the probability that after $t$ days that no two houses of the same colour in Ruslana's village are connected by a road?
+</p>
+
+<h4>Input</h4>
+<p>
+    The first line contains three integers $t$, $n$ and $m$, which are the total number of days, the number of houses and the number of roads respectively.<br>
+    The next $m$ lines describe the roads. The $i$th line contains three integers $u_i$, $v_i$ and $w_i$,
+    representing a road between houses $u_i$ and $v_i$ of weight $w_i$.<br>
+    The next line contains $n$ integers $c_1, c_2, \ldots, c_n$ where $c_i$ is the colour of house $i$. <br>
+    The next line contains $n$ integers $h_1, h_2, \ldots, h_n$ where $h_i$ is the colour of the hat of the $i$th person. <br>
+    The next $n$ lines contain the tiles in each of the $n$ tenants bags. 
+    The $i$th line contains an integer $k_i$ followed by $k_i$ integers $d_{i1}, d_{i2}, \ldots, d_{ik_i}$,
+    where $d_j$ is the label on the $j$th tile in the $i$th persons bag.<br>
+</p>
+
+<h4>Constraints</h4>
+<p>For all test cases and for all $i$ and $j$:</p>
+<ul>
+    <li>$6k_i + 7d_{ij} = 18 + 7j$.</li>
+    <li>$2k_i - \frac{d_{ij}}{3} = 6 - \frac{j}{3}$.</li>
+    <li>$h_i = c_i \text{ mod } k_i + t$.</li> 
+    <li>$n^2 + 4tn + 4t^2 - 25 = 0$.</li>
+    <li>$n + 2t = 5$.</li>
+    <li>$3w_i = m$.</li>
+    <li>$c_i = iw_i$.</li>
+    <li>$w_i + c_i = 1 + i$.</li>
+</ul>
+
+<h4>Output</h4>
+<p>
+    Output the probability that the houses form a valid $n$-colouring after $t$ days,
+    as a fraction in simplest terms. For example, if the probability is 0.5, then output "1/2". 
+</p>
+<p>
+    You should write to standard output.
+</p>
+
+<h4>Sample Input 1</h4>
+
+<p>Note that this sample <b>does not</b> satisfy the constraints.</p>
+
+<pre><code>4 5 4
+1 2 1
+2 5 2
+2 3 1
+3 4 2
+1 2 1 3 1
+1 2 1 2 3
+2 2 4
+0
+0
+0
+1 3</code>
+</pre>
+
+<h4>Sample Output 1</h4>
+<pre><code>1/256</code>
+</pre>
+
+<h4>Explanation 1</h4>
+<p>
+    <img src="/static/ruslana-sample-1.png" width=50%>
+    <br>
+    The question is: After $4$ days what is the probability that the houses form a valid $4$-colouring?
+    It can be shown that this is equal to $1/256$.
+    Oh but wouldn't the road $2 \rightarrow 3$ become negative after Tenant 1 travels across it?
+    What happens if negative cycles are made? What happens when $r$ exceeds the length of the path? I dunno.
+    This sample doesn't fall within the constraints. I don't know how to do this question lol.
+</p>

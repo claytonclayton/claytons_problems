@@ -1,0 +1,15 @@
+digraph G {
+    graph [dpi=600, bgcolor="transparent"]
+    node [shape=circle, style=filled]
+    edge [minlen=2]
+    3 [color=red]
+    6 [color=orange]
+    1 [color=yellow]
+    2 [color=green]
+    5 [color=blue]
+    7 [color=aqua]
+    4 [color=purple]
+    3 -> 6 -> 1 -> 2 -> 5 -> 4
+    2 -> 7 [minlen=1]
+    {rank=same; 3;6;1;2;5;4}
+}

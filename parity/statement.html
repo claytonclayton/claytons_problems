@@ -1,0 +1,104 @@
+<p>
+    <b>Program time limit: 1 second</b>
+    <br>
+    <b>Program memory limit: 512 MB</b>
+</p>
+
+<p>
+    You find a sheet of paper with a grid of numbers $G$ of size $R \times C$ written on it. You fold the paper so that when you unfold it, all numbers are surrounded by fold lines (corner numbers have two adjacent fold lines, edge numbers have 3 adjacent fold lines and inner numbers are surrounded on all sides by 4 adjacent fold lines). For each number you add to it the number of mountain folds it is adjacent to. Is there a series of folds so that all numbers in the resulting grid are even? <br>
+
+    Subtask-1 - Assume the paper is always folded with alternating folds starting with U i.e U -> L -> U -> L ... <br>
+    Subtask-2 - The paper can be folded with arbitrary folds <br> 
+</p>
+
+<p>
+    Output a series of folds where each fold is of the form UV, UM, LV or LM. <br>
+    Copied from paper question from IMC contest.
+</p>
+
+<ul>
+    <li>
+        Up Valley (<code class="d-inline-block">UV</code>).
+        This fold is performed by taking the bottom of the paper and folding it towards you and up onto the front facing side.
+        This would result in a horizontal valley crease when unfolded.
+    </li>
+    <li>
+        Up Mountain (<code class="d-inline-block">UM</code>).
+        This fold is performed by taking the bottom of the paper and folding it away from you and up onto the back facing side.
+        This would result in a horizontal mountain crease when unfolded.
+    </li>
+    <li>
+        Left Valley (<code class="d-inline-block">LV</code>).
+        This fold is performed by taking the right side of the paper and folding it towards you and left onto the front facing side.
+        This would result in a vertical valley crease when unfolded.
+    </li>
+    <li>
+        Left Mountain (<code class="d-inline-block">LM</code>).
+        This fold is performed by taking the right side of the paper and folding it away from you and left onto the back facing side.
+        This would result in a vertical mountain crease when unfolded.
+    </li>
+</ul>
+
+<h4>Input</h4>
+<p>
+    The first line contains integers $R$ and $C$ representing the row size and column size of the grid respectively. $R$ and $C$ are guaranteed to be powers of 2. <br>
+    Next follows $R$ lines each with $C$ integers where the $j^{th}$ integer on the $i^{th}$ line represents the integer in row $i$ and column $j$. 
+</p>
+<p>
+    You should read from standard input.
+</p>   
+
+<h4>Constraints</h4>
+<p>For all test cases:</p>
+<ul>
+    <li>$2 \le R, C \le 1024$.</li>
+    <li>$R$ and $C$ are powers of 2</li>
+    <li>0 \le $G_{ij}$ \le 100</li>
+</ul>
+
+<p>Additionally:</p>
+<ul>
+    <li>For 50% of test cases, you can assume the paper was folded with alternating folds starting from U.</li>
+    <li>For 50% of test cases, there are no additional constraints.</li>
+</ul>
+
+<h4>Output</h4>
+<p>
+    If there is a valid folding, then the first line will contain YES, then the next line will be an integer $m$ representing the number of folds required. <br>
+    The next $m$ lines will contain one of UM, UV, LM or LV. <br>
+    If there is no valid folding, then output NO.
+</p>
+<p>
+    You should write to standard output.
+</p>
+
+<h4>Sample Input 1</h4>
+<pre><code>2 2
+2 4
+5 1
+</code></pre>
+
+<h4>Sample Output 1</h4>
+<pre>YES
+2
+UM
+LM
+<code></code></pre>
+
+<h4>Explanation 1</h4>
+<p>
+
+</p>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+    MathJax = {
+        options: {
+            enableMenu: false
+        },
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

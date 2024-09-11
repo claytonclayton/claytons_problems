@@ -1,0 +1,7 @@
+digraph G {
+    graph [dpi=600, bgcolor="transparent"]
+    node [shape=circle]
+    edge [minlen=2]
+    1 -> 2 -> 3 -> 4 -> 5
+    {rank = same; 1; 2; 3; 4; 5}
+}

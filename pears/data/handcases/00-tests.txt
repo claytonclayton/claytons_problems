@@ -1,0 +1,8 @@
+sub1-01-06 - these are all the pairs in [1, 2, 3, 4]
+sub1-07 - testing min_n, n = 2, k = nc2 = 1
+sub1-08 - testing max n, k for sub1, n = 1000, k = nc2
+sub1-09 - same as sub1-08 but k = nc2 - 1
+sub2-01 - testing max n, k for sub2, n = 10^6, k = nc2
+sub2-02 - same as sub2-01 but k = nc2 - 1
+sub3-01 - testing max n, k for sub3, n = 10^9, k = nc2
+sub3-02 - same as sub3-01 but k = nc2 - 1

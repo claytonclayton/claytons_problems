@@ -1,0 +1,157 @@
+
+Ianurarian Triples
+
+Given integers n and m, does there exist an array a of length n, 
+composed of only 2s and 4s, such that there are exactly m triples 
+1 <= i < j < k <= n such that a_i * a_j = a_k?
+
+If so construct such an array. 
+
+Example:
+n = 6, m = 2
+
+Answer:
+YES
+[4, 2, 2, 4, 4, 2]
+
+The array has length 6 and there are exactly 2 Ianuarian Triples:
+a_2 * a_3 = a_4
+a_2 * a_3 = a_5
+
+Solution:
+
+Idea 1:
+A reduction of the question is:
+What is the minimum array length required to generate 
+m triples such that a_i * a_j = a_k?
+
+If we find that the minimum array length is less than or equal to n,
+then we can just pad the right side of the array with 2s and no 
+extra triples will be generated (or left pad with 4s). 
+If n is less than the minimum array length, then we know that such 
+an array could not exist so we output NO. We can also show that a 
+minimum array length will always exist for any m. 
+
+Idea 2:
+All natural numbers can be expressed as a sum of nC2s (n choose 2), 
+since for any number m, m = 1 * m = 2C2 * m. The array equivalent of
+this is an array beginning with [2, 2]. Appending m 4s on the end 
+will produce an Ianuarian Triple count of m (call this icount).
+
+Idea 3:
+We can quickly determine the icount of an array by looking at each 
+4 and summing all 2s to the left of it choose 2.
+
+For example,
+[4, 2, 2, 2, 4, 2, 2, 4, 4, 2, 2]
+The first four has 0 twos to the left of it so we ignore. 
+The next four has 3 twos to the left of it. We can pick a total 
+of 3C2 pairs from these 2s to multiply to get the current 4, so the
+icount ending at this 4 is 3C2 = 3. The next 2 fours both have 5 
+twos to the left of them so thats another 2 * 5C2 triples. 
+In total there are 3C2 + 5C2 + 5C2 = 23 Ianuarian Triples.
+
+So a number like 50 can be expressed as,
+1 + 1 + 6 + 21 + 21 = 2C2 + 2C2 + 4C2 + 7C2 + 7C2
+which is exactly the number of Ianurian Triples in this array.
+[2, 2, 4, 4, 2, 2, 4, 2, 2, 2, 4, 4] which is 12 array elements. 
+But 50 can also be expressed as,
+5 * 5C2 = 5 * 10 which corresponds to this array.
+[2, 2, 2, 2, 2, 4, 4, 4, 4, 4] which is 10 array elements 
+(also the minimum array size to create 50 Ianurian Triples as 
+confirmed by brute force).
+
+So it may seem that if we can find the minimum number of nC2s that 
+sum to m, this will help us find the answer. 
+
+Idea 4:
+We can think of a candidate solution as an array beginning with 
+some number of 2s, ending with a 4, and having some number of 4s 
+interspersed throughout.
+
+So solutions without the interspersed 4s will take the form:
+2: 224
+3: 2224
+4: 22224
+...
+i: 222...224 - where iC2 is maximised but doesnt exceed m
+
+The icount of these base solutions is equal to iC2, as each 4 
+has i 2s to the left of it. So in order to get from iC2 to m we 
+will have to intersperse with some number of 4s so that their 
+icount sum makes the difference m - iC2.
+
+The problem now becomes the "Change-making problem" (see wikipedia). 
+Given a number of coin denominations, what is the minimum number of 
+coins required to make m amount of change?
+
+As shown before, placing a 4 within one of these base solutions will
+increase the icount by some kC2 <= iC2 (since for a base solution
+there are at most i 2s), so the denominations in this case 
+are numbers of the form kC2 where 2 <= k <= i, and the target for 
+each base solution is m - iC2.
+
+We can solve this with dp.
+Let dp[i][j] be the minimum number of kC2s where 2 <= k <= i 
+required to sum to a target j.
+
+dp[2][0] = 0
+dp[i][j] = min(dp[i][j - nC2[k]]) + 1
+       2 <= k <= i
+
+For a given state i, j we cycle through all possible kC2 coin 
+denominations to find the denomination which produces the minimal
+size set. If we include a kC2 then we increase the size by 1.
+
+This dp isn't actually 2-D, it's just i 1-D dps as dp[i]s aren't 
+dependent on each other (technically they are in my solution
+only because of hacky time saving reasons).
+
+For quadratic reasons, the max value of i we need to calculate is
+of order O(sqrt(m)) (see time complexity). Call this value 
+mless.
+
+After calculating dp[mless][m - nC2[mless]], since we know the 
+length of each base solution, i + 1 (i 2s followed by one 4), then
+we can compare the sizes of each candidate solution after adding
+the appropriate dp[i][m - iC2] number of 4s. The minimum size array
+we find will be the minimum size array required to make m 
+Ianuarian Triples.
+
+The solution is finished! (finally)
+
+Time Complexity:
+This part is freaking epic. 
+In the dp we know that j is dependent on m since it maximises at
+m - nC2[i], so there's a factor of m somewhere in here, BUT,
+the rest of the dp relies on how many nC2 denominatioms we look at.
+
+To find this we ask the question, What is the max value of i
+such that iC2 is maximised but doesn't exceed m? Thanks to the nCk
+formula we know that nC2 = n!/((n - 2)!2!) = n(n - 1)/2. So all we
+have to do is solve n(n - 1)/2 = m.
+
+This is a quadratic. It simplifies to
+n^2 - n - 2m = 0
+
+subbing coefficients into the quadratic formula we get
+    (1 + sqrt((-1) ** 2 - 4 * 1 * -2m)) / 2 * 1 
+  = (1 + sqrt(1 + 8m)) / 2
+
+which is of order O(sqrt(m))!
+Both variables i and k are dependent on this value so in total
+the time complexity of solving the dp is 
+O(m sqrt(m) sqrt(m)) = O(m^2).
+
+We also have to sort and print the final array which takes O(nlogn)
+In total the algorithm is O(m^2 + nlogn). 
+
+BUT EVEN COOLER,
+
+After we calculate the dp to the upper bound of m, we can reuse
+results of the dp for future queries. Since there are O(sqrt(m))
+base solutions, future queries will only take O(sqrt(m)). So after 
+the inital O(m^2) calculation, the solution is ammortised 
+O(sqrt(m) + nlog(n))! How sick is that?
+
+Thank you for reading. I love this question.

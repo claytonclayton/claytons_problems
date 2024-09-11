@@ -1,0 +1,148 @@
+<p>
+    <b>Program time limit: 1 second</b>
+    <br>
+    <b>Program memory limit: 512 MB</b>
+</p>
+
+<p>
+    One day, you continually fold a piece of paper in half and in half again,
+    until you stop and unfold the paper to its original size.
+    You see an $R$ by $C$ grid of rectangles, with each rectangle surrounded creases.
+    The vertical creases form their own $R$ by $C-1$ grid,
+    and the horizontal creases form their own $R-1$ by $C$ grid.
+<p>
+</p>
+    You wonder if you saw someone else's unfolded paper whether you could determine the folds they used to create it.
+    Given whether each crease is a valley or a mountain,
+    find a sequence of folds that could have created resulted in those creases,
+    or determine that no such sequence exists.
+</p>
+<p>
+    There are two different fold directions, Up and Left, and two different fold types, Valley and Mountain.
+    Therefore all folds in consideration are of one of the following types: 
+</p>
+<ul>
+    <li>
+        Up Valley (<code class="d-inline-block">UV</code>).
+        This fold is performed by taking the bottom of the paper and folding it towards you and up onto the front facing side.
+        This would result in a horizontal valley crease when unfolded.
+    </li>
+    <li>
+        Up Mountain (<code class="d-inline-block">UM</code>).
+        This fold is performed by taking the bottom of the paper and folding it away from you and up onto the back facing side.
+        This would result in a horizontal mountain crease when unfolded.
+    </li>
+    <li>
+        Left Valley (<code class="d-inline-block">LV</code>).
+        This fold is performed by taking the right side of the paper and folding it towards you and left onto the front facing side.
+        This would result in a vertical valley crease when unfolded.
+    </li>
+    <li>
+        Left Mountain (<code class="d-inline-block">LM</code>).
+        This fold is performed by taking the right side of the paper and folding it away from you and left onto the back facing side.
+        This would result in a vertical mountain crease when unfolded.
+    </li>
+</ul>
+
+<p>
+The diagrams below depict an Up Valley fold, Up Mountain fold, Left Valley fold and Left Mountain fold respectively.
+</p>
+<img src="/static/UV.png" height="300">
+<img src="/static/UM.png" height="300">
+<img src="/static/LV.png" height="300">
+<img src="/static/LM.png" height="300">
+
+<h4 id="input">Input</h4>
+<p>
+    The first line of input contains the two integers $R$ and $C$, which is the size of grid of rectangles formed by the creases.
+    <br>
+    $R$ lines follow, each containing $C-1$ integers. This is the grid of vertical creases, where $0$ represents a valley crease and $1$ represents a mountain crease. 
+    <br>
+    $R-1$ lines follow, each containing $C$ integers. This is the grid of horizontal creases, where $0$ represents a valley crease and $1$ represents a mountain crease. 
+</p>
+<p>
+    You should read from standard input.
+</p>
+
+<h4 id="constraints">Constraints</h4>
+<p>For all test cases:</p>
+<ul>
+    <li>$2 \le R, C \le 1024$.</li>
+    <li>$R$ and $C$ are both powers of 2.</li>
+    <li>Every value in each grid is either $0$ or $1$.</li>
+</ul>
+
+<h4 id="output">Output</h4>
+<p>
+    If there is no sequence of folds that could have created resulted in the given creases, output <code class="d-inline-block">NO</code>.
+    <br>
+    Otherwise, on the first line, output <code class="d-inline-block">YES</code>, and on each of the following lines, output either
+    <code class="d-inline-block">UM</code>,
+    <code class="d-inline-block">UV</code>,
+    <code class="d-inline-block">LM</code>, or
+    <code class="d-inline-block">LV</code>,
+    specifying the sequence of folds.
+</p>
+<p>
+    You should write to standard output.
+</p>
+
+<h4 id="sample-input-1">Sample Input 1</h4>
+<pre><code>4 2
+1
+1
+1
+1
+0 1
+0 1
+1 0
+</code></pre>
+
+<h4 id="sample-output-1">Sample Output 1</h4>
+<pre><code>YES
+LM
+UV
+UV
+</code></pre>
+
+<h4 id="explanation-1">Explanation 1</h4>
+<p>
+The given creases are depicted below.
+</p>
+<img src="/static/sample1-final.png" height="300">
+
+<p>
+A sequence of folds which would result in those given creases is depicted below.
+</p>
+<img src="/static/sample1-step-1.png" height="300">
+<br>
+<img src="/static/sample1-step-2.png" height="300">
+<br>
+<img src="/static/sample1-step-3.png" height="150">
+<br>
+
+<h4 id="sample-input-1">Sample Input 2</h4>
+<pre><code>4 4
+0 0 1
+1 0 1
+0 1 1
+1 1 0
+0 0 1 1
+1 1 1 1
+1 1 0 0
+</code></pre>
+
+<h4 id="sample-output-1">Sample Output 2</h4>
+<pre><code>NO
+</code></pre>
+
+<h4 id="explanation-1">Explanation 2</h4>
+<p>
+In this case, it can be shown that no sequence of folds results in the given creases.
+</p>
+
+<h4 id="input">Scoring</h4>
+<p>
+    Your program will be run on multiple secret test cases one after another,
+    and if it produces the correct output for <b>all</b> test cases, it solves the task.
+</p>

@@ -1,0 +1,103 @@
+
+<p>
+    <b>Program time limit: 1 second</b>
+    <br>
+    <b>Program memory limit: 512 MB</b>
+</p>
+
+<p>
+    Ianus sees Hestia counting stars and wonders if he can create an array of his own that mirrors 
+    her favourite constellations. He knows what size arrays Hestia likes and the number of stars in <a href="https://en.wikipedia.org/wiki/Hydrus" target="_blank">Hydrus</a>,
+    but he isn't certain if it is even possible to marry these two numbers together.
+</p>
+
+<p>
+    A <i>Ianuarian triple</i> is a triplet of integers $i$, $j$ and $k$ such that $1 \le i \lt j \lt k \le n$ and $a_i \times a_j = a_k$.
+    He wonders, does there exist an array $a$ of length $n$, <b>composed of only 2s and 4s</b>,
+    which has exactly $m$ Ianuarian triples?
+    If so, help Ianus construct such an array.
+</p>
+
+<h4 id="input">Input</h4>
+<p>
+    The first line contains one integer $t$, the number of testcases.
+    <br>
+    The next $t$ lines contain two integers $n$ and $m$, the target length of the array $a$ and the target number of Ianuarian Triples.
+    <br>
+    You should read from standard output.
+</p>
+
+<h4 id="constraints">Constraints</h4>
+<ul>
+    <li>$1 \le t \le 10\; 000$</li>
+    <li>$1 \le n \le 10\; 000$</li>
+    <li>$1 \le m \le 10\; 000$</li>
+</ul>
+
+<h4 id="output">Output</h4>
+<p>
+    If there does not exist an array of length $n$ with $m$ Ianuarian Triples, output "NO".
+    <br>
+    If there exists such an array output "YES". On the next line output the array, a string of length $n$ consisting of characters '2' and '4'.
+    <br>
+    You should write to standard output.
+</p>
+
+<h4 id="sample-input-1">Sample Input 1</h4>
+<pre><code>3
+6 2
+7 7
+10 100
+</code></pre>
+
+<h4 id="sample-output-1">Sample Output 1</h4>
+<pre><code>YES
+422442
+YES
+2424244
+NO
+</code></pre>
+
+<h4 id="explanation-1">Explanation 1</h4>
+
+<p> 
+    <b>Testcase 1</b>
+    <br>
+    422442 has length 6 and has exactly 2 Ianuarian Triples:
+    <br>
+    $a_2 \times a_3 = a_4$
+    <br>
+    $a_2 \times a_3 = a_5$
+</p>
+
+<p>
+    <b>Testcase 2</b><br>
+    2424244 has length 7 and has exactly 7 Ianuarian Triples:
+    <br>
+    $a_1 \times a_3 = a_4$
+    <br>
+    $a_1 \times a_3 = a_6$
+    <br>
+    $a_1 \times a_3 = a_7$
+    <br>
+    $a_1 \times a_5 = a_6$
+    <br>
+    $a_1 \times a_5 = a_7$
+    <br>
+    $a_3 \times a_5 = a_6$
+    <br>
+    $a_3 \times a_5 = a_7$
+    <br>
+</p>
+
+<p>
+    <b>Testcase 3</b>
+    <br>
+    It can be shown that there exists no array of length 10 with exactly 100 Ianuarian Triples.
+</p>
+
+<h4 id="input">Scoring</h4>
+<p>
+    Your program will be tested on multiple inputs one after another.
+    Your score for the submission will be 100% if your program outputs the correct answer for all of these inputs.
+</p>

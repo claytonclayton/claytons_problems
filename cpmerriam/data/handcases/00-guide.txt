@@ -1,0 +1,13 @@
+sub1-01 - 3-cycle
+sub1-02 - 3-cycle as an ancestor to 3 leaves
+sub1-03 - 3-cycle with 3 leaves and one leaf has a non-cycle ancestor
+sub1-04 - 3-cycle with 3 leaves and a cycle memeber has an ancestor
+sub1-05 - both a cycle and a leaf have the same ancestor
+sub1-06 - line graph
+sub1-07 - tree
+sub1-08 - forest
+sub1-09 - different ancestors have same obvious word as a child
+sub1-10 - all leaves
+sub1-11 - one leaf
+sub1-12 - 1-cycle
+sub1-13 - 1-cycle with ancestor
