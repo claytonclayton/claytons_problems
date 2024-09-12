@@ -65,9 +65,9 @@ $a_3 \times a_5 = a_6$ ($3 \times 2 = 6$)
 
 ### Explanation 2
 
-There are exactly 2 Hestian Triples
-$a_1 \times a_2 = a_4$ ($5 \times 4 = 20$)
-$a_1 \times a_3 = a_4$ ($5 \times 4 = 20$) 
+There are exactly 2 Hestian Triples  
+$a_1 \times a_2 = a_4$ ($5 \times 4 = 20$)  
+$a_1 \times a_3 = a_4$ ($5 \times 4 = 20$)  
 
 ### Scoring
 Your program will be tested on multiple inputs one after another. Your score for the submission will be 100% if your program outputs the correct answer for all of these inputs.
