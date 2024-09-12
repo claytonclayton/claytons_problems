@@ -48,13 +48,13 @@ NO
 ### Explanation 1
 
 ## Testcase 1 
-422442 has length 6 and has exactly 2 Ianuarian Triples:
+422442 has length 6 and has exactly 2 Ianuarian Triples:  
 - $a_2 \times a_3 = a_4$
 - $a_2 \times a_3 = a_5$
 
 
 ## Testcase 2
-2424244 has length 7 and has exactly 7 Ianuarian Triples:
+2424244 has length 7 and has exactly 7 Ianuarian Triples:  
 -$a_1 \times a_3 = a_4$
 -$a_1 \times a_3 = a_6$
 -$a_1 \times a_3 = a_7$
