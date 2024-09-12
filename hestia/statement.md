@@ -10,7 +10,7 @@ her favourite:
 but altogether there are too many stars to count. Despite their abundance, she thinks that counting 
 the triples of an array would be faster. 
 
-A *Hestian triple* is a triplet of integers $i$, $j$ and $k$ such that $1 \le i \lt j \lt k \le n$ and $a_i \times a_j = a_k$. She wonders, given an array $a$, how many Hestian triples does it contain?
+A *Hestian Triple* is a triplet of integers $i$, $j$ and $k$ such that $1 \le i \lt j \lt k \le n$ and $a_i \times a_j = a_k$. She wonders, given an array $a$, how many Hestian Triples does it contain?
 
 Help Hestia find the answer.
 
@@ -24,7 +24,7 @@ The next line has $n$ whitespaced integers, $a_1, a_2, \cdots a_n$ where $a_i$ i
 
 Each input case will satisfy the following constraints
 
-- $1 \le n \le 10\; 000$
+- $1 \le n \le 10,000$
 - for all $1 \le i \le n$, $1 \le a_i \le 10^{18}$
 - for all $1 \le i \lt j \le n$, $1 \le a_i \times a_j \le 10^{18}$
 
