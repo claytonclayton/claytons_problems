@@ -18,7 +18,7 @@ Help Hestia find the answer.
 
 The first line of input contains one integer $n$, the length of the array $a$.
 
-The next line has $n$ whitespaced integers, $a_1, a_2, \cdots a_n$ where $a_i$ is the $i$th element of $a$.
+The next line has $n$ whitespaced integers, $a_1, a_2, \cdots a_n$ where $a_i$ is the $i^{th}$ element of $a$.
 
 ### Constraints
 
@@ -46,10 +46,10 @@ Output one integer, the number of Hestian Triples in $a$.
 
 ### Explanation 1
 
-There are exactly 3 Hestian Triples
-$a_1 \times a_2 = a_4$ ($5 \times 2 = 10$)
-$a_2 \times a_3 = a_6$ ($2 \times 3 = 6$) 
-$a_3 \times a_5 = a_6$ ($3 \times 2 = 6$) 
+There are exactly 3 Hestian Triples  
+$a_1 \times a_2 = a_4$ ($5 \times 2 = 10$)  
+$a_2 \times a_3 = a_6$ ($2 \times 3 = 6$)  
+$a_3 \times a_5 = a_6$ ($3 \times 2 = 6$)  
 
 ### Sample Input 2 
 
