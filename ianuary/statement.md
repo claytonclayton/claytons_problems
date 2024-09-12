@@ -55,13 +55,13 @@ NO
 
 ## Testcase 2
 2424244 has length 7 and has exactly 7 Ianuarian Triples:  
--$a_1 \times a_3 = a_4$
--$a_1 \times a_3 = a_6$
--$a_1 \times a_3 = a_7$
--$a_1 \times a_5 = a_6$
--$a_1 \times a_5 = a_7$
--$a_3 \times a_5 = a_6$
--$a_3 \times a_5 = a_7$
+- $a_1 \times a_3 = a_4$
+- $a_1 \times a_3 = a_6$
+- $a_1 \times a_3 = a_7$
+- $a_1 \times a_5 = a_6$
+- $a_1 \times a_5 = a_7$
+- $a_3 \times a_5 = a_6$
+- $a_3 \times a_5 = a_7$
 
 ## Testcase 3
 It can be shown that there exists no array of length 10 with exactly 100 Ianuarian Triples.
