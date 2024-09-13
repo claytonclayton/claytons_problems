@@ -3,7 +3,7 @@ Some competitive programming problems I wrote/helped write in 2024
 
 # List
 o - cpmerriam
-    x - ran check.sh
+    o - ran check.sh
 x - hestia
     x - validator
     x - generator
