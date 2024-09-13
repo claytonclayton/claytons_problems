@@ -15,11 +15,6 @@ ll a[N];
 int main() {
     cin >> n;
 
-    if (n > 1000) {
-        cout << 0 << endl;
-        return 0;
-    }
-
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
