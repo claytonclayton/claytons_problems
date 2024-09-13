@@ -3,9 +3,10 @@
 # Usage example: bash ../validate.sh SUB1
 
 if [ "$#" -lt 1 ]; then
-  echo "no subtask flag provided"
-  exit 1
+    echo "no subtask flag provided"
+    exit 1
 fi
+
 g++ -std=c++17 -O2 -o validator -D $1 validator.cpp
 for input in $(find data -name "*.in" | sort); do
     printf $input
