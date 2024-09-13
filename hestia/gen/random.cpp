@@ -16,12 +16,6 @@ enum choice {
     FACTOR, PRODUCT, RANDOM
 };
 
-const int READABLE = 10;
-const int SMALL = 100;
-const int MEDIUM = 1'000;
-const int LARGE = 5'000;
-const int LARGEST = 10'000;
-
 const ll FOURTH_ROOT_LLMAX = 31'600;
 
 ll random_from_array(vector<ll> arr) {
@@ -52,7 +46,7 @@ void generate_array_from_factors(int n, int factor_weight, int product_weight, i
             cout << random_from_array(factors) << " ";
         else if (c == PRODUCT)
             cout << random_product(factors) << " ";
-        else
+        else // RANDOM
             cout << rnd.next(1LL, FOURTH_ROOT_LLMAX) << " ";
     }
     cout << endl;
