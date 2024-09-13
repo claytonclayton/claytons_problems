@@ -41,13 +41,13 @@ void generate_array_from_factors(int n, int factor_weight, int product_weight, i
 
     for (int i = 0; i < n; i++) {
         choice c = choose(factor_weight, product_weight, rand_weight);
-
+        if (i != 0) cout << " ";
         if (c == FACTOR)
-            cout << random_from_array(factors) << " ";
+            cout << random_from_array(factors);
         else if (c == PRODUCT)
-            cout << random_product(factors) << " ";
+            cout << random_product(factors);
         else // RANDOM
-            cout << rnd.next(1LL, FOURTH_ROOT_LLMAX) << " ";
+            cout << rnd.next(1LL, FOURTH_ROOT_LLMAX);
     }
     cout << endl;
 }
