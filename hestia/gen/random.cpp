@@ -52,9 +52,15 @@ void generate_array_from_factors(int n, int factor_weight, int product_weight, i
     cout << endl;
 }
 
+// Uses a given factor list to generate a random array.
+// For each item in the random array randomly choose to
+// either, pick a random factor from the factor list,
+// pick two random factors and multiply them, or pick a   
+// random number in [1, FOURTH_ROOT_LLMAX]. These three
+// choices are chosen randomly in the ratio
+// factor_weight : product_weight : rand_weight.
 int main(int argc, char** argv) {
     registerGen(argc, argv, 1);
-
     int n = stoi(argv[1]);
     int factor_weight = stoi(argv[2]);
     int product_weight = stoi(argv[3]);
