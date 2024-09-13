@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run from task directory (usually via a gen.sh script)
-# Usage example: bash ../test-solutions.sh solutions/accepted/solution.cpp
+# Usage example: bash ../generate.sh
 
 if [ "$#" -lt 1 ] || [ ! -e $1 ]; then
   echo "no solution file provided $#"

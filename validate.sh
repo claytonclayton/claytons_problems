@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run from task directory
-# Usage example: bash ../run-validator.sh SUB1
+# Usage example: bash ../validate.sh SUB1
 
 if [ "$#" -lt 1 ]; then
   echo "no subtask flag provided"
