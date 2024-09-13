@@ -58,4 +58,4 @@ rm random
 rm rand_arr
 
 echo "Generating outputs"
-bash ../gen-output.sh solutions/accepted/solution.cpp
+bash ../generate.sh solutions/accepted/clayton.cpp
