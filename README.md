@@ -8,10 +8,10 @@ o - cpmerriam
     x - attributions
 x - hestia
     x - validator
-    x - generator
-    x - ran check.sh
+    o - generator
+    o - ran check.sh
     x - solution.txt
-    x - attributions
+    o - attributions
 x - ianuary
     x - validator
     x - generator
