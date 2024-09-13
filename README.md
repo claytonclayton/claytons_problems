@@ -7,7 +7,7 @@ o - cpmerriam
     x - solution.txt
     x - attributions
 x - hestia
-    x - validator
+    o - validator
     o - generator
     o - ran check.sh
     x - solution.txt
