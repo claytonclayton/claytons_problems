@@ -12,7 +12,7 @@ The first line contains integers $n$, $k$ and $d$, the number of sides of the po
 
 The second line contains $n$ integers $p_1, p_2 ... p_n$, the orientations of the $n$ chainsaws at 0 seconds. The $i^{th}$ chainsaw will make an angle $p_i \times \frac{2 \pi}{d}$ radians with the horizontal axis anticlockwise. 
 
-The polygon's lowest side is always horizontal. The $i_{th}$ chainsaw begins at the $i_{th}$ vertex starting from the right most vertex of the lowest side going anticlockwise around the polygon. 
+The polygon's lowest side is always horizontal. The $i^{th}$ chainsaw begins at the $i^{th}$ vertex starting from the right most vertex of the lowest side going anticlockwise around the polygon. 
 
 You can assume chainsaws are shorter than the side length of the polygon. If a chainsaw intersects completely with an edge of the polygon it is considered inside the polygon. 
 
