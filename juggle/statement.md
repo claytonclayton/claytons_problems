@@ -7,10 +7,11 @@ Terry the Chainsaw Juggler juggles chainsaws for a living at UNSW's Chainsaw Jug
 
 Terry lets $n$ chainsaws fly and is hoping to wow the crowd during his $k$ second performance. A flourish occurs when the tips of all $n$ chainsaws are pointing inside the central polygon. How many flourishes will Terry perform within his performance?
 
+<center>
 Solarized dark                                          |  Solarized Ocean
 :------------------------------------------------------:|:-------------------------:
-<img src="juggle-pent.png" alt="drawing" width="200"/>  |  <img src="juggle-hex.png" alt="drawing" width="200"/>
-
+<img src="juggle-pent.png" alt="drawing" width="300"/>  |  <img src="juggle-hex.png" alt="drawing" width="300"/>
+</center>
 
 
 
