@@ -8,7 +8,7 @@ Terry the Chainsaw Juggler juggles chainsaws for a living at UNSW's Chainsaw Jug
 Terry lets $n$ chainsaws fly and is hoping to wow the crowd during his $k$ second performance. A flourish occurs when the tips of all $n$ chainsaws are pointing inside the central polygon. How many flourishes will Terry perform within his performance?
 
 <img src="pent.png" alt="my alt text", width="300"/>
-<img src="hex.png" alt="my alt text", width="300"/>
+<!-- <img src="hex.png" alt="my alt text", width="300"/> -->
 
 $n=5, d=-4$. A chainsaw begins its journey at $A$ and rotates $90^{\circ}$ clockwise every transition. It enters the pentagon 3 times.
 $n=5, d=5$. A flourish. All 5 chainsaws are pointing inside the hexagon.
