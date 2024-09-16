@@ -9,6 +9,7 @@ Terry lets $n$ chainsaws fly and is hoping to wow the crowd during his $k$ secon
 
 <p align="middle">
     <img src="juggle-pent.png" alt="drawing" width="300"/> 
+    <figcaption>$n = 5, d = -4$. A single chainsaw begins its journey at $A$ and rotates $90^{\circ}$ clockwise every transition.</figcaption>
     <img src="juggle-hex.png" alt="drawing" width="300"/>
 </p>
 
