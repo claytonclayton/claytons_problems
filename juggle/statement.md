@@ -7,8 +7,8 @@ Terry the Chainsaw Juggler juggles chainsaws for a living at UNSW's Chainsaw Jug
 
 Terry lets $n$ chainsaws fly and is hoping to wow the crowd during his $k$ second performance. A flourish occurs when the tips of all $n$ chainsaws are pointing inside the central polygon. How many flourishes will Terry perform within his performance?
 
-<img src="juggle-pent" alt="drawing" width="200"/>
-<img src="juggle-pent" alt="drawing" width="200"/>
+<img src="juggle-pent.png" alt="drawing" width="200"/>
+<img src="juggle-hex.png" alt="drawing" width="200"/>
 
 ### Input
 The first line contains integers $n$, $k$ and $d$, the number of sides of the polygon, the number of seconds in the performance and the number of rotations a chainsaw will make in a revolution (every second a chainsaw rotates $\frac{2 \pi}{d}$ radians).
